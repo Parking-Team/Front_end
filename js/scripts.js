@@ -1,4 +1,3 @@
-
 var h = document.getElementById("h");
 var a = document.getElementById("a");
 var s = document.getElementById("s");
