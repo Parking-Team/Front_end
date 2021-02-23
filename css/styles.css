@@ -83,8 +83,20 @@
             
             #about{
                 background-color: #A2C7F9;
-                padding: 20px;
-                display: none;
+                padding: 0px;
+                opacity: 0;
+            }
+
+            #services{
+                background-color: #A2C7F9;
+                padding: 0px;
+                opacity: 0;
+            }
+            
+            #projects{
+                background-color: #A2C7F9;
+                padding: 0px;
+                opacity: 0;
             }
             
             #copyright{
