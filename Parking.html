@@ -7,107 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"><!--to make the site compatible for mobiles-->
 
         <title>Parking</title>
-        <link rel="stylesheet" href="css\bootstrap.css">
-        
-        <style>
-            
-            ::-webkit-scrollbar {
-              width: 17px;
-            }
-
-            /* Track */
-            ::-webkit-scrollbar-track {
-              box-shadow: inset 7px 10px 20px #03386e; 
-              background-color: white;
-              border-radius: 10px;
-            }
-
-            /* Handle */
-            ::-webkit-scrollbar-thumb {
-              background: rgba(162, 199, 249,1); 
-              border-radius: 10px;
-            }
-
-            /* Handle on hover */
-            ::-webkit-scrollbar-thumb:hover {
-              background: rgba(3, 56, 110,1);
-            }
-            
-            body{
-                padding-top: 91px;
-                background-color: #03386e;
-            }
-            
-            .navbar{
-                padding: 20px;
-                padding-left: 50px;
-            }
-            .navbar a{
-                font-size: 20px;
-            }
-            
-            .h{
-                /*position: absolute;
-                left: 70;*/
-            }
-            
-            #logo{
-                position: absolute;
-                top: 20;
-                left: 20;
-            }
-            
-            .thumb{
-                
-                margin-top: 430px;
-                
-            }
-            .thumbnail{
-                background-color: #03386e;
-                color: white;
-            }
-            .caption p, .caption h3{
-                color: white;
-            }
-            
-            
-            .div{
-                position:fixed;
-                width: 100%;
-                height: 470px;
-                z-index: -1;
-            }
-            
-            .thumb1{
-                background: rgba(255,255,255,0.5);
-                padding: 10px;
-            }
-            .thumb1 h2{
-                color: black;
-                opacity: 1;
-            }
-            
-            .thumb2{
-                background-color: white;
-                
-                padding: 50px;
-            }
-            
-            #about{
-                background-color: #A2C7F9;
-                padding: 20px;
-                display: none;
-            }
-            
-            #copyright{
-                background-color: #053f1e;
-                color: white;
-                padding: 30px;
-                padding-top: 50px;
-                padding-left: 500px;
-            }
-            
-        </style>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/styles.css">
         
     </head>
     
@@ -132,7 +33,7 @@
                           <span class="icon-bar"></span>
                           <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand colorlink" href="#">Parking</a>
+                        <a class="navbar-brand colorlink parking" onclick='home();' href="#">Parking</a>
                     </div>
                 </div>
                 
@@ -141,24 +42,21 @@
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav ">
                     
-                  <li class="active"><a class="colorlink" href="#">Home <span class="sr-only">(current)</span></a></li>
+                  <li class="active home" id="h" onclick='home();'><a class="colorlink" href="#">Home <span class="sr-only">(current)</span></a></li>
                   
-                  <li><a class="colorlink" href="#about">About us</a></li>
-                  <li><a class="colorlink" href="#services">Services</a></li>
-                  <li><a class="colorlink" href="#projects">Previous projects</a></li>
+                  <li class="about" id="a" onclick='about();'><a class="colorlink" href="#about">About us</a></li>
+                  <li class="services" id="s" onclick='services();'><a class="colorlink" href="#services">Services</a></li>
+                  <li class="projects" id="p" onclick='projects();'><a class="colorlink" href="#projects">Previous projects</a></li>
+                  <li class="contact" id="c" onclick='contact();'><a class="colorlink" href="" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Contact us</a></li>
                     
-                  <li><a class="colorlink" href="" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Contact us</a></li>
-                    
-                  
-                  
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle colorlink" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="#">Button</a></li>
-                          <li><a href="#">Button</a></li>
-                          <li><a href="#">Button</a></li>
-                        </ul>
-                      </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle colorlink" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Button</a></li>
+                      <li><a href="#">Button</a></li>
+                      <li><a href="#">Button</a></li>
+                    </ul>
+                  </li>
                     
                 </ul>
                   
@@ -215,7 +113,7 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
             <div class="item active">
-              <img src="Pictures/bg.jpg"  alt="...">
+              <img src="Pictures/bg.jpg" alt="...">
               <div class="carousel-caption">
                 1
               </div>
@@ -266,7 +164,7 @@
                   <div class="caption">
                     <h3>About</h3>
                     <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
-                    <p><a href="#" class="btn btn-primary" role="button">More Info</a></p>
+                    <p><a href="#about" onclick="about();" class="btn btn-primary about" role="button">More Info</a></p>
                   </div>
                 </div>
               </div>
@@ -279,7 +177,7 @@
                   <div class="caption">
                     <h3>Services</h3>
                     <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
-                    <p><a href="#" class="btn btn-primary" role="button">More Info</a></p>
+                    <p><a href="#services" onclick="services();" class="btn btn-primary services" role="button">More Info</a></p>
                   </div>
                 </div>
               </div>
@@ -292,7 +190,7 @@
                   <div class="caption">
                     <h3>Previous Projects</h3>
                     <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
-                    <p><a href="#" class="btn btn-primary" role="button">More Info</a></p>
+                    <p><a href="#projects" onclick="projects();" class="btn btn-primary projects" role="button">More Info</a></p>
                   </div>
                 </div>
               </div>
@@ -311,7 +209,7 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close"  onclick='home();' data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Contact Us</h4>
               </div>
                 
@@ -350,8 +248,8 @@
               </div>
                 
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <a href="" class="btn btn-primary" target="_blank">Send</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal"  onclick='closeContact();'>Close</button>
+                  <a href="" class="btn btn-primary" target="_blank"  onclick='closeContact();'>Send</a>
               </div>
             </div>
           </div>
@@ -360,6 +258,24 @@
         
         <div id="about">
         <center><h2>About Us</h2></center>
+        <br>
+        <center>
+            <p style="width: auto;">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you. This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors.</p>    
+        </center>
+        
+        </div>
+        
+        <div id="services">
+        <center><h2>Services</h2></center>
+        <br><br>
+        <center>
+            <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you. This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors.</p>    
+        </center>
+        
+        </div>
+        
+        <div id="projects">
+        <center><h2>Previous Projects</h2></center>
         <br><br>
         <center>
             <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you. This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors.</p>    
@@ -395,6 +311,8 @@
         <script src="js\bootstrap.min.js"></script>
         
         <script src="js/scripts.js"></script>
+        
+        <script src="JQ\jq.js"></script>
         
     </body>
 </html>
