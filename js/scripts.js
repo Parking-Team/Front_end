@@ -41,13 +41,5 @@ function contact(){
 }
 
 function closeContact(){
-    if(h.classList.contains("acitve")){
-        home();
-    }else if(a.classList.contains("acitve")){
-        about();
-    }else if(s.classList.contains("acitve")){
-        services();
-    }else if(p.classList.contains("acitve")){
-        projects();
-    }
+    c.classList.remove("active");
 }
