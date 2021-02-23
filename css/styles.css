@@ -1,4 +1,43 @@
+ ::-webkit-scrollbar {
+              width: 17px;
+            }
 
+            /* Track */
+            ::-webkit-scrollbar-track {
+              box-shadow: inset 7px 10px 20px #03386e; 
+              background-color: white;
+              border-radius: 10px;
+            }
+
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+              background: rgba(162, 199, 249,1); 
+              border-radius: 10px;
+            }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+              background: rgba(3, 56, 110,1);
+            }
+            
+            body{
+                padding-top: 91px;
+                background-color: #03386e;
+            }
+            
+            .navbar{
+                padding: 20px;
+                padding-left: 50px;
+            }
+            .navbar a{
+                font-size: 20px;
+            }
+            
+            .h{
+                /*position: absolute;
+                left: 70;*/
+            }
+            
             
             #logo{
                 position: absolute;
