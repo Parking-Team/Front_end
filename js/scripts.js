@@ -38,10 +38,6 @@ function projects(){
 
 function contact(){
     c.classList.add("active");
-    a.classList.remove("active");
-    s.classList.remove("active");
-    p.classList.remove("active");
-    h.classList.remove("active");
 }
 
 function closeContact(){
